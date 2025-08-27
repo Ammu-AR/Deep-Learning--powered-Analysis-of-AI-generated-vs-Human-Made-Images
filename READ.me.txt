@@ -1,0 +1,61 @@
+Project: Deep Learning-Powered Analysis of AI-Generated vs. Human-Made Images
+
+Project Overview:
+This project focuses on detecting and differentiating AI-generated images from real, human-made images using deep learning techniques. With the surge of AI-generated media, it has become crucial to develop systems that can accurately identify AI-generated images. This project explores three deep learning architectures:
+- Traditional Convolutional Neural Network (CNN)
+- VGG16 (pre-trained)
+- Xception (pre-trained)
+The models are trained and evaluated on a labeled dataset of real and AI-generated images to compare their performance in terms of accuracy and computational efficiency.
+
+
+Technologies Used:
+- Python 3.9+
+- TensorFlow / Keras
+- OpenCV
+- NumPy, Pandas, Matplotlib
+- scikit-learn
+
+Dataset:
+The dataset contains two classes of images:
+- real – genuine human-made images
+- fake – AI-generated images
+
+Features:
+
+Data Exploration and Visualization -
+- Display sample images for each class
+- Plot label distribution (bar chart & pie chart)
+
+Data Preprocessing -
+- Resizing, normalization, and one-hot encoding of labels
+- Train-test split (85% training, 15% validation)
+- Data augmentation using ImageDataGenerator (rotation, zoom, shift, horizontal flip)
+
+Model Architectures -
+- Traditional CNN: Multiple convolutional and max-pooling layers with batch normalization and dropout.
+- VGG16: Transfer learning using pre-trained weights with global average pooling and dense layers.
+- Xception: Transfer learning using depthwise separable convolutions for better feature extraction.
+
+Training -
+- Models are trained with Adam optimizer and class weights to handle class imbalance.
+- Accuracy and loss are tracked for both training and validation sets.
+
+Evaluation
+- Random samples from the test set are displayed with predicted and actual labels.
+- Comparison of model performance:
+- CNN: Training accuracy ~66.3%, Validation accuracy ~72.2%
+- VGG16: Training accuracy ~58.9%, Validation accuracy ~73.6%
+- Xception: Training accuracy ~79.6%, Validation accuracy ~76.3%
+
+
+Key Findings:
+Xception outperforms other models due to its depth wise separable convolutions, providing better feature extraction for differentiating AI-generated images.
+There is a trade-off between model complexity and computational efficiency:
+- More complex architectures like Xception achieve higher accuracy but require more computational resources.
+- Lightweight models may be preferred for real-time applications.
+
+
+Future Work:
+- Optimize models for real-time image detection.
+- Explore lightweight architectures to balance accuracy and computation speed.
+- Extend the dataset with more diverse AI-generated images for better generalization.
